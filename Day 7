@@ -1,0 +1,88 @@
+
+#include <stdio.h>
+
+int main() {
+    char ch;
+    scanf("%c",&ch);
+    if(ch>='A' && ch<='Z' || ch>='a' && ch<='z')
+        printf("Alphabet");
+    else if(ch>='0' && ch <='9')
+        printf("Digit");
+    else
+        printf("Not an Alphabet or Digit");
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    printf("Enter a year: ");
+    scanf("%d", &year);
+
+    if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) {
+        printf("%d is a leap year.\n", year);
+    } else {
+        printf("%d is not a leap year.\n", year);
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int marks;
+
+    printf("Enter the student's marks (0-100): ");
+    scanf("%d", &marks);
+
+    if (marks >= 90 && marks <= 100) {
+        printf("Grade: A\n");
+    } else if (marks >= 70 && marks < 90) {
+        printf("Grade: B\n");
+    } else if (marks >= 50 && marks < 70) {
+        printf("Grade: C\n");
+    } else if (marks >= 0 && marks < 50) {
+        printf("Grade: Fail\n");
+    } else {
+        printf("Invalid marks entered.\n");
+    }
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int monthNumber;
+
+    printf("Enter the month number (1-12): ");
+    scanf("%d", &monthNumber);
+
+    switch (monthNumber) {
+        case 12:
+        case 1:
+        case 2:
+            printf("Season: Winter\n");
+            break;
+        case 3:
+        case 4:
+        case 5:
+            printf("Season: Spring\n");
+            break;
+        case 6:
+        case 7:
+        case 8:
+            printf("Season: Summer\n");
+            break;
+        case 9:
+        case 10:
+        case 11:
+            printf("Season: Autumn\n");
+            break;
+        default:
+            printf("Invalid month number entered.\n");
+            break;
+    }
+
+    return 0;
+}
