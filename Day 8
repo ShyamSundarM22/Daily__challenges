@@ -1,0 +1,94 @@
+#include <stdio.h>
+int main(){
+    int n;
+    int max=0,min=9;
+    scanf("%d",&n);
+
+    while (n!=0){
+        int last=n%10;
+
+        if(last>max)
+            max=last;
+        if(last<min)
+            min=last;
+        n/=10;
+    }
+    printf("%d\n",max);
+    printf("%d",min);
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int num, lastDigit, nextDigit, isAscending = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    lastDigit = num % 10;
+    num = num / 10;
+
+    while (num > 0) {
+        nextDigit = num % 10;
+        if (nextDigit > lastDigit) {
+            isAscending = 0;
+            break;
+        }
+        lastDigit = nextDigit;
+        num = num / 10;
+    }
+
+    if (isAscending)
+        printf("Digits are in ascending order.\n");
+    else
+        printf("Digits are not in ascending order.\n");
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    unsigned long long fact = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        fact = fact * i;
+    }
+
+    printf("Factorial of %d = %llu\n", n, fact);
+
+    return 0;
+}
+#include <stdio.h>
+
+int main() {
+    int num, digit, count = 0, sum = 0, product = 1;
+
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (num == 0) {  // special case
+        count = 1;
+        sum = 0;
+        product = 0;
+    } else {
+        while (num > 0) {
+            digit = num % 10;
+            count++;
+            sum += digit;
+            product *= digit;
+            num = num / 10;
+        }
+    }
+
+    printf("Count of digits = %d\n", count);
+    printf("Sum of digits = %d\n", sum);
+    printf("Product of digits = %d\n", product);
+
+    return 0;
+}
+
+
